@@ -116,6 +116,7 @@
             this.divide.TabIndex = 8;
             this.divide.Text = "÷";
             this.divide.UseVisualStyleBackColor = true;
+            this.divide.Click += new System.EventHandler(this.divide_Click);
             // 
             // root
             // 
@@ -156,6 +157,7 @@
             this.multiply.TabIndex = 12;
             this.multiply.Text = "X";
             this.multiply.UseVisualStyleBackColor = true;
+            this.multiply.Click += new System.EventHandler(this.multiply_Click);
             // 
             // nine
             // 
@@ -166,6 +168,7 @@
             this.nine.TabIndex = 11;
             this.nine.Text = "9";
             this.nine.UseVisualStyleBackColor = true;
+            this.nine.Click += new System.EventHandler(this.nine_Click);
             // 
             // eught
             // 
@@ -176,6 +179,7 @@
             this.eught.TabIndex = 10;
             this.eught.Text = "8";
             this.eught.UseVisualStyleBackColor = true;
+            this.eught.Click += new System.EventHandler(this.eught_Click);
             // 
             // seven
             // 
@@ -186,6 +190,7 @@
             this.seven.TabIndex = 9;
             this.seven.Text = "7";
             this.seven.UseVisualStyleBackColor = true;
+            this.seven.Click += new System.EventHandler(this.seven_Click);
             // 
             // minus
             // 
@@ -196,6 +201,7 @@
             this.minus.TabIndex = 16;
             this.minus.Text = "-";
             this.minus.UseVisualStyleBackColor = true;
+            this.minus.Click += new System.EventHandler(this.minus_Click);
             // 
             // six
             // 
@@ -206,6 +212,7 @@
             this.six.TabIndex = 15;
             this.six.Text = "6";
             this.six.UseVisualStyleBackColor = true;
+            this.six.Click += new System.EventHandler(this.six_Click);
             // 
             // five
             // 
@@ -216,6 +223,7 @@
             this.five.TabIndex = 14;
             this.five.Text = "5";
             this.five.UseVisualStyleBackColor = true;
+            this.five.Click += new System.EventHandler(this.five_Click);
             // 
             // four
             // 
@@ -237,6 +245,7 @@
             this.plus.TabIndex = 20;
             this.plus.Text = "+";
             this.plus.UseVisualStyleBackColor = true;
+            this.plus.Click += new System.EventHandler(this.plus_Click);
             // 
             // three
             // 
@@ -247,6 +256,7 @@
             this.three.TabIndex = 19;
             this.three.Text = "3";
             this.three.UseVisualStyleBackColor = true;
+            this.three.Click += new System.EventHandler(this.three_Click);
             // 
             // two
             // 
@@ -257,6 +267,7 @@
             this.two.TabIndex = 18;
             this.two.Text = "2";
             this.two.UseVisualStyleBackColor = true;
+            this.two.Click += new System.EventHandler(this.two_Click);
             // 
             // one
             // 
@@ -267,6 +278,7 @@
             this.one.TabIndex = 17;
             this.one.Text = "1";
             this.one.UseVisualStyleBackColor = true;
+            this.one.Click += new System.EventHandler(this.one_Click);
             // 
             // equall
             // 
@@ -277,6 +289,7 @@
             this.equall.TabIndex = 24;
             this.equall.Text = "=";
             this.equall.UseVisualStyleBackColor = true;
+            this.equall.Click += new System.EventHandler(this.equall_Click);
             // 
             // dot
             // 
@@ -297,6 +310,7 @@
             this.zero.TabIndex = 22;
             this.zero.Text = "0";
             this.zero.UseVisualStyleBackColor = true;
+            this.zero.Click += new System.EventHandler(this.zero_Click);
             // 
             // pos
             // 
@@ -340,6 +354,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Calculator";
             this.Text = "Calculator";
+            this.Load += new System.EventHandler(this.Calculator_Load);
             this.ResumeLayout(false);
 
         }
