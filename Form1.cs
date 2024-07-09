@@ -214,7 +214,24 @@ namespace Calculator
                 
             }
         }
+        static decimal cal(string input)
+        {
+            List<Object> list = new List<Object>();
+            string index = "";
+            for(int i =0; i <= input.Length; i++)
+            {
+               if(input[i] == '+' || input[i] == '-' || input[i] == '*' || input[i] == '/')
+               {
+                  list.Add(index);  
+               }
+               else
+               {
+                  index += input[i];
+               }
 
+            }
+            return 0;
+        }
         private void dotbutton_Click(object sender, EventArgs e)
         {
             bool isEmpty = string.IsNullOrEmpty(input);
