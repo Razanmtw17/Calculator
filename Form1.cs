@@ -15,7 +15,83 @@ namespace Calculator
     {
         string input = "";
 
-       
+        List<Object> list = new List<Object>();
+        string index = "";
+
+        public decimal getresult(string input)
+        {
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (input[i] == '+' || input[i] == '-' || input[i] == '*' || input[i] == '/' || input[i] == '=')
+                {
+                    list.Add(index);
+                    index = "";
+                    index += input[i];
+                    list.Add(index);
+                    index = "";
+                }
+                else
+                {
+                    index += input[i];
+                }
+            }
+            List<decimal> numbers = new List<decimal>();
+            List<string> operand = new List<string>();
+            for (int i = 0; i < list.Count; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    numbers.Add(Convert.ToDecimal(list[i]));
+                }
+                else
+                {
+                    operand.Add(Convert.ToString(list[i]));
+                }
+            }
+            decimal re = 0;
+            for (int i = 0; i < operand.Count; i++)
+            {
+                if (i == 0)
+                {
+                    switch (operand[i])
+                    {
+                        case "+":
+                            re = numbers[i] + numbers[i + 1];
+                            break;
+                        case "-":
+                            re = numbers[i] - numbers[i + 1];
+                            break;
+                        case "*":
+                            re = numbers[i] * numbers[i + 1];
+                            break;
+                        case "/":
+                            re = numbers[i] / numbers[i + 1];
+                            break;
+
+                    }
+                }
+                else
+                {
+                    switch (operand[i])
+                    {
+                        case "+":
+                            re += numbers[i + 1];
+                            break;
+                        case "-":
+                            re -= numbers[i + 1];
+                            break;
+                        case "*":
+                            re *= numbers[i + 1];
+                            break;
+                        case "/":
+                            re /= numbers[i + 1];
+                            break;
+
+                    }
+                }
+            }
+                return re;
+        }
         public Form1()
         {
             InitializeComponent();
@@ -104,6 +180,7 @@ namespace Calculator
             label1.Text = "";
             input = "";
             label2.Text = "";
+            
         }
 
         private void plusbutton_Click(object sender, EventArgs e)
@@ -211,27 +288,14 @@ namespace Calculator
                 label1.Text += " = ";
                 label2.Text = label1.Text;
                 label1.Text = "";
+                input += "=";
                 
+                label1.Text = Convert.ToString(getresult(input));
+                input = "";
+                input += label1.Text;
             }
         }
-        static decimal cal(string input)
-        {
-            List<Object> list = new List<Object>();
-            string index = "";
-            for(int i =0; i <= input.Length; i++)
-            {
-               if(input[i] == '+' || input[i] == '-' || input[i] == '*' || input[i] == '/')
-               {
-                  list.Add(index);  
-               }
-               else
-               {
-                  index += input[i];
-               }
-
-            }
-            return 0;
-        }
+       
         private void dotbutton_Click(object sender, EventArgs e)
         {
             bool isEmpty = string.IsNullOrEmpty(input);
