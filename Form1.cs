@@ -92,6 +92,7 @@ namespace Calculator
             }
                 return re;
         }
+
         public Form1()
         {
             InitializeComponent();
@@ -177,10 +178,7 @@ namespace Calculator
 
         private void deletebutton_Click(object sender, EventArgs e)
         {
-            label1.Text = "";
-            input = "";
-            label2.Text = "";
-            
+            Application.Restart();
         }
 
         private void plusbutton_Click(object sender, EventArgs e)
@@ -196,6 +194,12 @@ namespace Calculator
                 if (input.EndsWith("+") || input.EndsWith("-") || input.EndsWith("*") || input.EndsWith("/") || input.EndsWith("."))
                 {
                     MessageBox.Show("Cant accept two experssion togather");
+                }
+                else if(input.EndsWith("/0"))
+                {
+                    MessageBox.Show("Cant divide by zero");
+                    input = input.Remove(input.Length - 1);
+                    label1.Text = label1.Text.Remove(label1.Text.Length - 1);
                 }
                 else
                 {
@@ -219,6 +223,12 @@ namespace Calculator
                 {
                     MessageBox.Show("Cant accept two experssion togather");
                 }
+                else if (input.EndsWith("/0"))
+                {
+                    MessageBox.Show("Cant divide by zero");
+                    input = input.Remove(input.Length - 1);
+                    label1.Text = label1.Text.Remove(label1.Text.Length - 1);
+                }
                 else
                 {
                     label1.Text += " - ";
@@ -241,6 +251,12 @@ namespace Calculator
                 {
                     MessageBox.Show("Cant accept two experssion togather");
                 }
+                else if (input.EndsWith("/0"))
+                {
+                    MessageBox.Show("Cant divide by zero");
+                    input = input.Remove(input.Length-1);
+                    label1.Text=label1.Text.Remove(label1.Text.Length-1);
+                }
                 else
                 {
                     label1.Text += " X ";
@@ -256,12 +272,19 @@ namespace Calculator
             if (isEmpty == true)
             {
                 MessageBox.Show("Cant start with / ");
+
             }
             else
             {
                 if (input.EndsWith("+") || input.EndsWith("-") || input.EndsWith("*") || input.EndsWith("/") || input.EndsWith("."))
                 {
                     MessageBox.Show("Cant accept two experssion togather");
+                }
+                else if (input.EndsWith("/0"))
+                {
+                    MessageBox.Show("Cant divide by zero");
+                    input = input.Remove(input.Length - 1);
+                    label1.Text = label1.Text.Remove(label1.Text.Length - 1);
                 }
                 else
                 {
@@ -282,6 +305,12 @@ namespace Calculator
             if (input.EndsWith("+") || input.EndsWith("-") || input.EndsWith("*") || input.EndsWith("/") || input.EndsWith("."))
             {
                 MessageBox.Show("Cant accept two experssion togather");
+            }
+            else if (input.EndsWith("/0"))
+            {
+                MessageBox.Show("Cant divide by zero");
+                input = input.Remove(input.Length - 1);
+                label1.Text = label1.Text.Remove(label1.Text.Length - 1);
             }
             else
             {

@@ -8,3 +8,8 @@ C:\Users\razan\OneDrive\Desktop\projects\WINFORM\Calculator\Calculator\obj\Debug
 C:\Users\razan\OneDrive\Desktop\projects\WINFORM\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 C:\Users\razan\OneDrive\Desktop\projects\WINFORM\Calculator\Calculator\obj\Debug\Calculator.exe
 C:\Users\razan\OneDrive\Desktop\projects\WINFORM\Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\razan\OneDrive\Desktop\projects\WINFORM\Calculator\Calculator\bin\Debug\Calculator.exe.manifest
+C:\Users\razan\OneDrive\Desktop\projects\WINFORM\Calculator\Calculator\bin\Debug\Calculator.application
+C:\Users\razan\OneDrive\Desktop\projects\WINFORM\Calculator\Calculator\obj\Debug\Calculator.TrustInfo.xml
+C:\Users\razan\OneDrive\Desktop\projects\WINFORM\Calculator\Calculator\obj\Debug\Calculator.exe.manifest
+C:\Users\razan\OneDrive\Desktop\projects\WINFORM\Calculator\Calculator\obj\Debug\Calculator.application
